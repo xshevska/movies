@@ -1,12 +1,12 @@
-import {Movie} from './Movie'
+import {Movie} from "./Movie";
 
 function Movies(props) {
     const {movies} = props;
 
     return (
-        <div className="movies">
+        <div className = "movies">
             {movies.map((movie) => (
-                <Movie key={movie.imdbID} {...movie} />
+                <Movie key = {movie.imdbID} {...movie} />
             ))}
         </div>
     );
