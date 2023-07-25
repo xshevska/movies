@@ -7,7 +7,7 @@ function Movie(props) {
         Poster: poster,
     } = props;
 
-    console.log('movie render');
+    // console.log('movie render');
 
     return (
         <div id={id} className="card movie">
