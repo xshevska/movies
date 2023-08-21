@@ -1,9 +1,7 @@
 import React, {useState} from "react";
 
 const Search = (props) => {
-    const {
-        findMovies = Function.prototype,
-    } = props;
+    const {findMovies = Function.prototype} = props;
 
     const [search, setSearch] = useState("");
     const [type, setType] = useState("all");
@@ -15,9 +13,9 @@ const Search = (props) => {
     };
 
     const handleFilter = (event) => {
-        setType(event.target.dataset.type)
+        setType(event.target.dataset.type);
         findMovies(search, event.target.dataset.type);
-        console.log(type)
+
     };
 
     return (
@@ -33,9 +31,7 @@ const Search = (props) => {
                 />
                 <button
                     className = "btn search-btn"
-                    onClick = {() =>
-                        findMovies(search, type)
-                    }
+                    onClick = {() => findMovies(search, type)}
                 >
                     Search
                 </button>
@@ -77,7 +73,6 @@ const Search = (props) => {
             </div>
         </div>
     );
-
 };
 
 export {Search};
